@@ -3,6 +3,7 @@ import { post, getJson } from "../pages/Request.js";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
+// Defines a modal that will display detailed information of a bill/invoices
 const ModalCell = (params) => {
   const [show, setShow] = useState(false);
   const [description, setDescription] = useState("");
