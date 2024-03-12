@@ -1,0 +1,35 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       Int       @id @default(autoincrement())
+  email    String    @unique
+  password String
+  name     String
+  invoices Invoice[]
+  bills    Bill[]
+}
+
+model Bill {
+  id       Int      @id @default(autoincrement())
+  amount   Float
+  due_date DateTime
+  details  String
+  userId   Int // This is the foreign key
+  user     User    @relation(fields: [userId], references: [id])
+}
+
+model Invoice {
+  id       Int      @id @default(autoincrement())
+  amount   Float
+  due_date DateTime
+  details  String
+  userId   Int // This is the foreign key
+  user     User    @relation(fields: [userId], references: [id])
+}
