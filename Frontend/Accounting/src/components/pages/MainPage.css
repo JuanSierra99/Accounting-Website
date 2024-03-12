@@ -1,0 +1,51 @@
+.table {
+  max-width: 100%;
+  margin: auto;
+  height: 90vh;
+  padding: 1rem;
+}
+
+.sidebar-section {
+  height: 100%;
+  width: var(--sidebar-width);
+  background-color: rgb(238, 233, 244);
+  position: fixed;
+  transition: all 0.4s ease-out;
+}
+
+.right-section {
+  background-color: rgb(239, 239, 239);
+  overflow: scroll;
+  width: calc(100% - var(--sidebar-width));
+  position: relative;
+  left: var(--sidebar-width);
+  transition: all 0.4s ease-out;
+}
+
+.toggle-sidebar-button {
+  user-select: none;
+  display: block;
+  margin-left: 15px;
+  background-color: transparent;
+  border: none;
+  transform: rotate(45deg);
+  font-weight: bolder;
+  font-size: larger;
+  color: rgb(0, 0, 0);
+  transition: transform 0.4s ease-out;
+}
+
+/*For when we hide the sidebar*/
+.hide-sidebar {
+  display: none;
+}
+
+.expand-table {
+  overflow: scroll;
+  left: 0;
+  width: 100%;
+}
+
+.rotate-button {
+  transform: none;
+}

@@ -1,0 +1,27 @@
+.sidebar-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-button {
+  background-color: transparent;
+  border: none;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.sidebar-button:hover {
+  background-color: rgb(179, 127, 227);
+  color: white;
+}
+
+.menu-header {
+  color: rgb(103, 103, 103);
+}
