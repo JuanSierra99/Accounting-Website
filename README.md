@@ -45,7 +45,13 @@ The development of this project was guided by principles of simplicity and funct
 
 ## Usage
 
-Under Construction...
+### Quickly switch between your bill and invoice pages
+
+![Alt Text](./demo/bills-invoices.gif)
+
+### Modal displays detailed information of the bill / invoice
+
+![Alt Text](./demo/modal-demo.gif)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
