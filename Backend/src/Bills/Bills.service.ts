@@ -9,7 +9,7 @@ export class BillService {
   // It selectively returns only the id, amount, and due_date fields of each bill, enhancing performance and privacy.
   async listBills(userId: number) {
     try {
-      const bills = this.prismaService.bill.findMany({
+      const bills = await this.prismaService.bill.findMany({
         where: { userId: userId },
         select: { id: true, amount: true, due_date: true },
       });

@@ -11,7 +11,7 @@ export class InvoiceService {
       // Utilizes Prisma Client's `findMany` method to retrieve all invoices belonging to the userId.
       // The `select` option specifies that only the id, amount, and due_date fields should be returned,
       // minimizing the amount of data transferred and enhancing privacy/security.
-      const invoices = this.prismaService.invoice.findMany({
+      const invoices = await this.prismaService.invoice.findMany({
         where: { userId: userId },
         select: { id: true, amount: true, due_date: true },
       });
